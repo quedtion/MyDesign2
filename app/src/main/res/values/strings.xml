@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MyDesign2</string>
+    <!--tab导航栏-->
+    <string name="shouye">首页</string>
+    <string name="tuijian">推荐</string>
+    <string name="dingdan">订单</string>
+    <string name="me">我的</string>
+    <string name="title_activity_teacher_canteen">TeacherCanteenActivity</string>
+    <string name="title_activity_muslim_canteen">MuslimCanteenActivity</string>
+    <string name="student">学生食堂</string>
+    <string name="teacher">教工食堂</string>
+    <string name="flavor">风味食堂</string>
+    <string name="muslim">清真食堂</string>
+    <string name="tuijian1">她在米饭里加一物，瞬间瘦成小妖精</string>
+    <string name="client">用户名</string>
+    <string name="phone">手机号</string>
+    <string name="title_activity_text">TextActivity</string>
+    <string name="meishi6">清凉一夏</string>
+    <string name="bussness1">请问您要加入稻香吗？</string>
+    <string name="name">姓名</string>
+    <string name="number">手机号码</string>
+    <string name="address">选择收货地址</string>
+    <string name="doornumber">例：5号楼103室</string>
+    <string name="title_activity_addressinform">AddressinformActivity</string>
+
+
+</resources>

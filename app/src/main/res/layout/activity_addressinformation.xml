@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.mydesign2.Activity.AddressinformationActivity">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="联系人"/>
+
+            <EditText
+                android:id="@+id/address_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:selectAllOnFocus="true"/>
+        </TableRow>
+        <!--定义一组单选钮-->
+        <RadioGroup
+            android:id="@+id/rg"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <!--定义两个单选钮-->
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/male"
+                android:text="男士"
+                android:checked="true"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/female"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:text="女士"
+                android:checked="false"/>
+        </RadioGroup>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="电话"/>
+
+            <EditText
+                android:id="@+id/address_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="@string/number" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="地址"/>
+
+            <EditText
+                android:id="@+id/address_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/address"
+                android:selectAllOnFocus="true"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="门牌号"/>
+
+            <EditText
+                android:id="@+id/address_door"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/doornumber"
+                android:selectAllOnFocus="true"/>
+        </TableRow>
+        <!--<TableRow>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="16sp"-->
+                <!--android:text="标签"/>-->
+
+            <!--&lt;!&ndash;<com.lcodecorex.LabelLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/address_label"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_margin="16dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:label_horizontalPadding="16dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:label_horizontalSpacing="16dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:label_verticalPadding="16dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:label_verticalSpacing="32dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:enableDivider="true" />&ndash;&gt;-->
+
+        <!--</TableRow>-->
+    </TableLayout>
+
+    <Button
+        android:id="@+id/certain_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="确定"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@color/orange"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

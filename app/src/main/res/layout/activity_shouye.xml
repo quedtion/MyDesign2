@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.mydesign2.Activity.ShouyeActivity">
+
+    <!--上浮导航条-->
+    <LinearLayout
+        android:id="@+id/shouye_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="130dp">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_gravity="center">
+
+            </android.support.v4.view.ViewPager>
+            <!--搜索框-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/search_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/search" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <!--滚动功能ScrollView-->
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search">
+
+                <!--中央食堂分类学生食堂、风味食堂、教师食堂、清真食堂-->
+                <LinearLayout
+                    android:id="@+id/center_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="400px"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="400px"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/student_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/cateen3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/student"
+                            android:textColor="@color/mistyrose"
+                            android:textSize="40sp" />
+                    </RelativeLayout>
+                    <!--学生食堂-->
+
+                    <!--风味食堂、教师食堂、清真食堂-->
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:layout_alignRight="@id/student_image"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <!--风味食堂-->
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0px"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/flavor_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/bear" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:text="风味食堂"
+                                android:textColor="@color/mistyrose"
+                                android:textSize="40sp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0px"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+                                <!--教工食堂-->
+                                <ImageView
+                                    android:id="@+id/teacher_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="3dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/leaf" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="20dp"
+                                    android:text="教工食堂"
+                                    android:textColor="@color/mistyrose"
+                                    android:textSize="20sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+                                <!--清真食堂-->
+                                <ImageView
+                                    android:id="@+id/muslim_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="3dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/girl" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="20dp"
+                                    android:text="清真食堂"
+                                    android:textColor="@color/mistyrose"
+                                    android:textSize="20sp" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--推荐商家roll-->
+                <LinearLayout
+                    android:id="@+id/roll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/center_image"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <!--灰色分各行-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2pt"
+                        android:background="@color/gainsboro" />
+
+                    <!--推荐商家-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="推荐商家"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+                <!--商家推荐列表-->
+                <ListView
+                    android:id="@+id/shouyeTuijian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="225dp">
+
+                </ListView>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
