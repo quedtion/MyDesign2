@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activity.MainActivity"
+            android:name=".Activity.MainActivity">
+
+        </activity>
+        <activity android:name=".ListView.DishListActivity">
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
             <intent-filter>
@@ -22,7 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListView.StudentListview" />
         <activity android:name=".ListView.TeacherListview" />
         <activity android:name=".ListView.MuslimListview" />
         <activity android:name=".ListView.FlavorListview" />

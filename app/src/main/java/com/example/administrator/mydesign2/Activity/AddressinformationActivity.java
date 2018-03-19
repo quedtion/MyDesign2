@@ -35,7 +35,7 @@ public class AddressinformationActivity extends AppCompatActivity  implements Me
     private EditText tv2;
     private EditText tv3;
     private EditText tv4;
-    private EditText tv5;
+//    private EditText tv5;
     private RadioGroup radioGroup;
     private String address_name;
     private String address_phone;
@@ -58,7 +58,7 @@ public class AddressinformationActivity extends AppCompatActivity  implements Me
         tv2 = (EditText) findViewById(R.id.address_phone);
         tv3 = (EditText) findViewById(R.id.address_address);
         tv4 = (EditText) findViewById(R.id.address_door);
-        tv5 = (EditText) findViewById(R.id.address_label);
+//        tv5 = (EditText) findViewById(R.id.address_label);
      /*性别组按钮*/
         radioGroup = (RadioGroup) findViewById(R.id.rg);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -83,7 +83,7 @@ public class AddressinformationActivity extends AppCompatActivity  implements Me
                 address_phone = tv2.getText().toString();
                 address_address = tv3.getText().toString();
                 address_door = tv4.getText().toString();
-                address_label=tv5.getText().toString();
+//                address_label=tv5.getText().toString();
 
                 address.setName(address_name);
                 address.setTel(address_phone);

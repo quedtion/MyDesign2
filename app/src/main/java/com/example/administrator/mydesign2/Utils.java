@@ -4,6 +4,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 /**
  * Created by Administrator on 2017/12/25.
@@ -33,6 +34,24 @@ public class Utils {
         //listView.getDividerHeight()获取子项间分隔符占用的高度
         //params.height最后得到整个ListView完整显示需要的高度
         listView.setLayoutParams(params);
+    }
+
+    public static void filtNull(TextView textView,String s) {
+        if (s != null) {
+            textView.setText(s);
+        } else {
+            textView.setText(filtNull(s));
+        }
+    }
+
+    //判断过滤单个string为null
+    public static String filtNull(String s) {
+        if (s!=null) {
+            return  s;
+        } else {
+            s="null";
+        }
+        return  s;
     }
 
 }

@@ -20,7 +20,7 @@ import com.example.administrator.mydesign2.CommonAdapter.CommonAdapter;
 import com.example.administrator.mydesign2.CommonAdapter.ViewHolder;
 import com.example.administrator.mydesign2.ListView.FlavorListview;
 import com.example.administrator.mydesign2.ListView.MuslimListview;
-import com.example.administrator.mydesign2.ListView.StudentListview;
+import com.example.administrator.mydesign2.ListView.DishListActivity;
 import com.example.administrator.mydesign2.ListView.TeacherListview;
 import com.example.administrator.mydesign2.MyAdapter;
 import com.example.administrator.mydesign2.MyPagerAdapter;
@@ -159,7 +159,7 @@ public class ShouyeFragment extends Fragment implements View.OnClickListener, Me
         switch (view.getId()) {
             case R.id.student_image:
                 //点击学生食堂
-                Intent stu_intent = new Intent(getActivity(), StudentListview.class);
+                Intent stu_intent = new Intent(getActivity(), DishListActivity.class);
                 startActivity(stu_intent);
                 break;
 

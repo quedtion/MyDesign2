@@ -19,12 +19,47 @@ public class Dish {
      */
     //id
     private int id;
+    //食堂id
     private int canteenid;
+    //菜品名称
     private String name;
+    //价格
     private double price;
+    //介绍
     private String introduce;
+
     private Date createtime;
     private int deleted;
+    //图片链接
+    private String photo;
+
+    private int num;
+
+    private int cart_num;
+
+    public int getCart_num() {
+        return cart_num;
+    }
+
+    public void setCart_num(int cart_num) {
+        this.cart_num = cart_num;
+    }
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
 
     public int getId() {
         return id;
