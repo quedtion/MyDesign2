@@ -15,7 +15,6 @@ import android.view.animation.TranslateAnimation;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.administrator.mydesign2.Adapter.DishAdapter;
 import com.example.administrator.mydesign2.Adapter.TrolleyAdapter;
@@ -23,6 +22,7 @@ import com.example.administrator.mydesign2.MyView.MyListView;
 import com.example.administrator.mydesign2.R;
 import com.example.administrator.mydesign2.model.Dish;
 import com.flipboard.bottomsheet.BottomSheetLayout;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,6 +39,9 @@ public class DishListActivity extends Activity {
     //购物车数据
     private SparseArray<Dish> selectedList;
 
+    //订单中的菜品项，用于“去结算”按钮点击跳转后传递数据
+    private List<Dish> orderList = new ArrayList<Dish>();
+
     private ViewGroup anim_mask_layout;//动画层
 
     //菜品列表
@@ -52,10 +55,15 @@ public class DishListActivity extends Activity {
     //购物车部分View
     private View bottomSheet;
 
+    //去结算
+    private TextView trolleyPay;
+
     private BottomSheetLayout bottomSheetLayout;
 
     //购物车部分显示的总价格
     Double totleMoney = 0.00;
+
+    private Gson gson = new Gson();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +86,24 @@ public class DishListActivity extends Activity {
                 showBottomSheet();
             }
         });
+        //去结算的点击事件
+        trolleyPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(selectedList.size() > 0){
+                    //若有有效数据，则触发去结算功能，跳转到订单确认页
+
+                    //将SparseArray转换成List
+                    for(int i = 0; i < selectedList.size(); i ++){
+                        orderList.add(selectedList.valueAt(i));
+                    }
+                    Log.v("order", gson.toJson(orderList));
+
+                    //页面跳转，并传递数据
+
+                }
+            }
+        });
     }
 
     //初始化页面
@@ -88,6 +114,7 @@ public class DishListActivity extends Activity {
         tv_totle_money= (TextView) findViewById(R.id.tv_totle_money);
         bottomSheetLayout = (BottomSheetLayout) findViewById(R.id.bottomSheetLayout);
         selectedList = new SparseArray<>();
+        trolleyPay = (TextView) findViewById(R.id.trolley_pay);
     }
 
     private void initData(){
@@ -321,8 +348,10 @@ public class DishListActivity extends Activity {
 
     //清空购物车
     public void clearCart(){
+        Log.v("***list***" , gson.toJson(selectedList));
         selectedList.clear();
 //        list2.clear();
+        Log.v("***list***" , gson.toJson(selectedList));
         if (dishList.size() > 0) {
             for (int j=0;j<dishList.size();j++){
                 dishList.get(j).setNum(0);
